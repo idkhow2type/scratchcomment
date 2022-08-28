@@ -1,8 +1,8 @@
 import scratchconnect as sc
-import json
 import html
 import time
 import threading
+import os
 """
 This project is possibly the most dodgy thing I've ever writen in my career
 I am very ashamed of myself
@@ -95,15 +95,9 @@ def set_cloud_var(name, value):
     except:
         set_cloud_var(name, value)
 
-
-with open('config.json') as f:
-    config = json.load(f)
-    global USER
-    global PROJECT
-    global COMMENT_LIMIT
-    USER = sc.ScratchConnect(config['username'], config['password'])
-    PROJECT = USER.connect_project(config['project'], False)
-    COMMENT_LIMIT = config['comment_limit']
+USER = sc.ScratchConnect(os.environ['username'], os.environ['password'])
+PROJECT = USER.connect_project(os.environ['project'], False)
+COMMENT_LIMIT = os.environ['comment_limit']
 
 interval = setInterval(600, update_title)
 """

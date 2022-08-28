@@ -8,5 +8,3 @@ Like most of my projects, I'm just dumping it here and there will be no document
 Thanks to Sid72020123 for the `scratchconnect` library and some debugging help
 
 <sub>why the hell am i still writing this it's not like anyone's gonna read it</sub>
-
-<sub>also forgot to mention this but please don't look at the commit history</sub>
